@@ -6,10 +6,10 @@ https://drive.google.com/file/d/140elSGiygvfEnQcZUnabqlizATMXqcKy/view?usp=drive
 
 task done:
 
-> serching
-> pagination
-> Bookmark
-> web service call
+> serching,
+> pagination,
+> Bookmark,
+> web service call,
 
 used packeges:
  provider: ^6.0.4 

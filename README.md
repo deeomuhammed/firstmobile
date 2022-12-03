@@ -1,16 +1,17 @@
-# userapp
+api used:"https://api.github.com/users?since=$since&per_page=10",
+apk link
+https://drive.google.com/file/d/140elSGiygvfEnQcZUnabqlizATMXqcKy/view?usp=drivesdk
 
-A new Flutter project.
+task done:
 
-## Getting Started
+> serching
+> pagination
+> Bookmark
+> web service call
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+used packeges:
+ provider: ^6.0.4 
+ http: ^0.13.5
+  
+pending task:if your serching a user you can't bookmark the  user 
+  

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
-import 'package:userapp/controller/service.dart';
 import 'package:userapp/controller/userdetailscontroller.dart';
 import 'package:userapp/view/tab1.dart';
 import 'package:userapp/view/tab2.dart';
@@ -20,8 +18,11 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
   }
 @override
   void dispose() {
-
+ var provider = Provider.of<UserDetailsController>(context, listen: false);
+ provider.bookmarkedcontroller.dispose();
+ provider.userdetailscontroller.dispose();
 tabController.dispose();
+
     super.dispose();
   }
   late TabController tabController;
@@ -31,11 +32,11 @@ tabController.dispose();
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-      title: Text('GITHUB USERS',style: TextStyle(fontSize: 24),),
-          bottom:TabBar(controller:tabController ,tabs: [Tab(text: 'Users',),Tab(text: 'Bookmark',)]) ,),
+      title: const Text('GITHUB USERS',style: TextStyle(fontSize: 24),),
+          bottom:TabBar(controller:tabController ,tabs:const [ Tab(text: 'Users',), Tab(text: 'Bookmark',)]) ,),
         body: TabBarView(
         controller:tabController ,
-        children: [UsersScreen(),BookmarkScreen()],
+        children:const [ UsersScreen(), BookmarkScreen()],
         // 
         ),
         
